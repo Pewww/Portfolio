@@ -38,8 +38,17 @@ export default {
     font-size: 90px;
     color: #FFF;
     font-family: 'againts';
-    letter-spacing: 6px;
     font-weight: 500;
+    animation: pew 1s forwards;
+  }
+
+  @keyframes pew {
+    from {
+      letter-spacing: 0;
+    }
+    to {
+      letter-spacing: 7px;
+    }
   }
 
   h1::after {
