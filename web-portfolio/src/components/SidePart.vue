@@ -101,14 +101,14 @@ export default {
   .side-btn:hover
   .side-lines::before {
     width: 26px;
-    top: -8px;
+    top: -7px;
     background-color: #00a8e8;
   }
 
   .side-btn:hover
   .side-lines::after {
     width: 26px;
-    top: 5px;
+    top: 4px;
     background-color: #00a8e8;
   }
 
