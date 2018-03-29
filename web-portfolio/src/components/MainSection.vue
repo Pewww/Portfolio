@@ -5,7 +5,7 @@
         <h3>BETTER LIFE</h3>
         <div class= "line"></div>
         <p class= "introduce">
-          저는 웹 프론트엔드 개발자를 지망하는 대덕소프트웨어마이스터 <br>
+          저는 웹 프론트엔드 개발자를 희망하는 대덕소프트웨어마이스터 <br>
           고등학교 학생입니다. 사람들에게 편의를 제공하고, 많은 도움을 줄 수 있는<br>
           멋진 개발자가 되기 위해 열심히 노력중입니다.
         </p>
@@ -21,7 +21,10 @@
       <a v-for= "resume in resumes"
          :href= "resume.href"
          :key= "resume.id"
-         class= "resumes">
+         class= "resumes"
+         @mouseover= "changeSrc(resume)"
+         @mouseout= "changeSrc(resume)"
+      >
           <p class= "resume-title">
             {{ resume.title }}
           </p>
@@ -31,6 +34,10 @@
           <li class= "resume-background" :id= "resume.idName">
             <div class= "resume-back-cover"></div>
           </li>
+          <img :src= "resume.imgToggle ? resume.hoverSrc : resume.src"
+               :alt = "resume.alt"
+               class= "link-imgs"
+          >
       </a>
     </ul>
   </section>
@@ -47,30 +54,52 @@ export default {
           title: 'tellin.kr | Planning, Web-Frontend',
           content: 'Frontend Development',
           href: 'https://www.naver.com',
-          idName: 'resume-back1'
+          idName: 'resume-back1',
+          imgToggle: false,
+          src: require('../assets/images/right-arrow.png'),
+          hoverSrc: require('../assets/images/right-arrow2.png'),
+          alt: '해당 페이지 이동'
         },
         {
           id: 2,
           title: 'entrydsm.hs.kr | Web-Frontend',
           content: 'Web Design, UI/UX, Frontend Development',
           href: 'https://www.naver.com',
-          idName: 'resume-back2'
+          idName: 'resume-back2',
+          imgToggle: false,
+          src: require('../assets/images/right-arrow.png'),
+          hoverSrc: require('../assets/images/right-arrow2.png'),
+          alt: '해당 페이지 이동'
         },  
         {
           id: 3,
           title: 'QT | Chrome Extension',
           content: 'Web Design, Frontend Development',
           href: 'https://www.naver.com',
-          idName: 'resume-back3'
+          idName: 'resume-back3',
+          imgToggle: false,
+          src: require('../assets/images/right-arrow.png'),
+          hoverSrc: require('../assets/images/right-arrow2.png'),
+          alt: '해당 페이지 이동'
         },
         {
           id: 4,
           title: 'Just Down | Web-Frontend',
           content: 'Frontend Development',
           href: 'https://www.naver.com',
-          idName: 'resume-back4'
+          idName: 'resume-back4',
+          imgToggle: false,
+          src: require('../assets/images/right-arrow.png'),
+          hoverSrc: require('../assets/images/right-arrow2.png'),
+          alt: '해당 페이지 이동'
         }
       ]
+    }
+  },
+
+  methods: {
+    changeSrc (target) {
+      target.imgToggle = !target.imgToggle;
     }
   }
 }
@@ -196,7 +225,7 @@ export default {
   .resumes .resume-content {
     font-weight: 400;
     padding-left: 15vw;
-    transition: 0.4s;
+    transition: 0.35s;
     font-family: 'montserrat';
     position: relative;
     z-index: 3;
@@ -221,7 +250,7 @@ export default {
     height: 100%;
     position: absolute;
     top: 0;
-    transition: 0.4s;
+    transition: 0.35s;
   }
 
   .resume-back-cover {
@@ -244,5 +273,13 @@ export default {
   .resumes:hover .resume-content {
     color: #FFF;
     padding-left: 19vw;
+  }
+
+  .link-imgs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    right: 10vw;
   }
 </style>
