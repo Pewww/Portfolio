@@ -11,6 +11,10 @@ export default {
 </script>
 
 <style>
+  html, body {
+    overflow-y: hidden;
+  }
+
   @font-face {
     font-family: 'againts';
     src: url(./assets/fonts/againts.otf);

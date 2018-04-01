@@ -85,7 +85,7 @@ export default {
   }
 
   #side-bar a:nth-of-type(1) {
-    margin-top: 20rem;
+    margin-top: 33vh;
   }
 
   #side-bar a span {
