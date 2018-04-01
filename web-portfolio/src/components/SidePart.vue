@@ -6,7 +6,7 @@
          @click= "redirect"
     >
 
-    <div class= "side-btn">
+    <div class= "side-btn" @click= "sideToggle" ref= "sideBtn">
       <span class= "side-lines"></span>
     </div>
 
@@ -14,12 +14,16 @@
        :key= "infos.id"
        :href= "infos.href"
        class= "info-links">
-      <img :src= "infos.src" :alt= "infos.alt">
+      <img :src= "infos.src" 
+           :alt= "infos.alt"
+      >
     </a>
   </div>
 </template>
 
 <script>
+import eventBus from '../eventBus'
+
 export default {
   name: 'side-part',
   data () {
@@ -48,7 +52,14 @@ export default {
   methods: {
     redirect () {
       this.$router.go(0);
+    },
+    sideToggle () {
+      eventBus.toggle = !eventBus.toggle;
     }
+  },
+  mounted () {
+    eventBus.$on('update:toggle', (val) => {
+    });
   }
 }
 </script>
@@ -57,10 +68,10 @@ export default {
   #side-part {
     width: 100px;
     height: 100%;
-    float: left;
     position: fixed;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
     z-index: 9999;
+    background-color: #FFF;
   }
 
   #side-part img {
@@ -80,7 +91,7 @@ export default {
     transform: translateX(-50%);
   }
 
-  .info-links:nth-child(3) {
+  .info-links:nth-child(4) {
     margin-bottom: 40px;
   }
 

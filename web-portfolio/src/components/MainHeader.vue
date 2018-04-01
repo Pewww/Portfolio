@@ -12,8 +12,15 @@
 </template>
 
 <script>
+import eventBus from '../eventBus'
+
 export default {
-  name: 'main-header'
+  name: 'main-header',
+  mounted () {
+    eventBus.$on('update:toggle', (val) => {
+      this.$el.style.filter = val ? 'blur(3px)' : defaultStatus
+    });
+  }
 }
 </script>
 

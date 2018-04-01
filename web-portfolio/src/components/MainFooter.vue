@@ -6,13 +6,20 @@
       <div class= "contact-cover"></div>
       <span class= "contact-text">CONTACT ME</span>
     </a>
-    <p class= "made-by">Coded by Pewww</p>
+    <p class= "made-by">Made by Pewww</p>
   </footer>
 </template>
 
 <script>
+import eventBus from '../eventBus'
+
 export default {
-  name: 'main-footer'
+  name: 'main-footer',
+  mounted () {
+    eventBus.$on('update:toggle', (val) => {
+      this.$el.style.filter = val ? 'blur(3px)' : defaultStatus 
+    })
+  }
 }
 </script>
 
@@ -62,7 +69,7 @@ export default {
 
   .contact-btn:hover .contact-cover { bottom: 0; }
   .contact-btn:hover {
-    animation: size 0.5s forwards ease-in-out 3;
+    animation: size 0.55s forwards ease-in-out 3;
   }
 
   @keyframes size {

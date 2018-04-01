@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import eventBus from '../eventBus'
+
 export default {
   name: 'main-section',
   data () {
@@ -101,6 +103,12 @@ export default {
     changeSrc (target) {
       target.imgToggle = !target.imgToggle;
     }
+  },
+
+  mounted () {
+    eventBus.$on('update:toggle', (val) => {
+      this.$el.style.filter = val ? 'blur(3px)' : defaultStatus
+    });
   }
 }
 </script>
