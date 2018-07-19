@@ -25,25 +25,25 @@ export default {
           id: 1,
           title: 'HOME',
           explain: 'A bit of everything',
-          href: '#'
+          href: 'https://www.github.com/Pewww'
         },
         {
           id: 2,
           title: 'WHO AM I?',
           explain: 'Me trying to describe myself',
-          href: '#'
+          href: 'https://www.github.com/Pewww'
         },
         {
           id: 3,
           title: 'SOME PROJECTS',
           explain: 'The cool ones',
-          href: '#'
+          href: 'https://www.github.com/Pewww'
         },
         {
           id: 4,
           title: 'CONTACT ME',
           explain: 'Get in touch',
-          href: '#'
+          href: 'https://www.github.com/Pewww'
         }
       ]
     }

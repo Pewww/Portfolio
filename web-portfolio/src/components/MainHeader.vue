@@ -2,10 +2,10 @@
   <div id= "background">
     <div class= "simple-intro">
       <h1>HELLO! I'M Pewww</h1>
-      <h2>KOREAN WEB-FRONTEND DEVELOPER</h2>
+      <h2>JUNIOR WEB-FRONTEND DEVELOPER</h2>
       <div class= "contact-btn">
         <div class= "btn-cover"></div>
-        <a href= "" class= "contact-url">CONTACT ME</a>
+        <a href= "https://www.github.com/Pewww" class= "contact-url">CONTACT ME</a>
       </div>
     </div>
   </div>

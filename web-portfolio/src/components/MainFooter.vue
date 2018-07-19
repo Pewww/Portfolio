@@ -2,7 +2,7 @@
   <footer>
     <h3>Let's Talk!</h3>
     <p>I'm ready for your company</p>
-    <a href= "" class= "contact-btn">
+    <a href= "https://www.github.com/Pewww" class= "contact-btn">
       <div class= "contact-cover"></div>
       <span class= "contact-text">CONTACT ME</span>
     </a>

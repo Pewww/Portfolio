@@ -38,13 +38,13 @@ export default {
           id: 1,
           src: require('../assets/images/facebook-logo2.png'),
           alt: '페이스북 링크',
-          href: 'https://www.facebook.com'
+          href: 'https://www.facebook.com/profile.php?id=100009179739894'
         },
         {
           id: 2,
           src: require('../assets/images/github-logo.png'),
           alt: '깃허브 링크',
-          href: 'https://www.github.com'
+          href: 'https://www.github.com/Pewww'
         }
       ]
     }
